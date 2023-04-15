@@ -1,0 +1,116 @@
+.u-section-1 .u-sheet-1 {
+    min-height: 400px;
+}
+
+
+/* Global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /* Use a Google font for a modern look */
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f2f2f2;
+    color: #333;
+    /* Set a default font color */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    /* Increase the font size for a more impactful header */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #555;
+    /* Add a different font color for the header */
+}
+
+h2 {
+    font-size: 36px;
+    /* Increase the font size for a more impactful subheader */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #777;
+    /* Add a different font color for the subheader */
+}
+
+p {
+    margin-bottom: 20px;
+    color: #444;
+    /* Add a different font color for the paragraphs */
+    font-size: 18px;
+    /* Increase the font size for easier readability */
+    line-height: 1.8;
+    /* Increase the line-height for easier readability */
+}
+
+a {
+    color: #0077cc;
+    /* Add a different font color for links */
+    text-decoration: none;
+    /* Remove the default underline for links */
+    font-weight: bold;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    color: #555;
+    /* Add a different font color for the footer */
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        /* Decrease the font size for smaller screens */
+    }
+    h2 {
+        font-size: 28px;
+        /* Decrease the font size for smaller screens */
+    }
+    p {
+        font-size: 16px;
+        /* Decrease the font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+        /* Decrease the font size even more for mobile devices */
+    }
+    h2 {
+        font-size: 20px;
+        /* Decrease the font size even more for mobile devices */
+    }
+    p {
+        font-size: 14px;
+        /* Decrease the font size even more for mobile devices */
+    }
+}

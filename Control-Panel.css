@@ -1,0 +1,39 @@
+/* Style for the robot control panel */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #11e40a;
+}
+
+button:active {
+    background-color: #07e91a;
+}
+
+
+/* Center the control panel */
+
+button:first-child {
+    margin-top: 50px;
+}
