@@ -17,133 +17,13 @@
 
     <script type="application/ld+json">
         {
-            "@context": "http://schema.org",
+            "@context": "",
             "@type": "Organization",
             "name": "",
             "logo": "/images/6d4002ae7c19e290947919cebeb0ef94ed77dd47e5c306b21634bbebe1089a9f54d93be50e97cc760c4f1ba57fe6f701ccbbdd4c0e2ed0a01e9af2_1280.png"
         }
     </script>
-    <script>
-        // Define the URLs for each API endpoint
-        const moveForwardUrl = "/api/move/motorA/forward";
-        const moveBackwardUrl = "/api/move/motorA/backward";
-        const rotateRightUrl = "/api/rotate/motorB/right";
-        const rotateLeftUrl = "/api/rotate/motorB/left";
-        const motorHighAUrl = "/api/rotate/motorA/High_A";
-        const motorHighBUrl = "/api/rotate/motorA/High_B";
-        const motorMediumAUrl = "/api/rotate/motorA/Medium_A";
-        const motorMediumBUrl = "/api/rotate/motorA/Medium_B";
-        const motorLowAUrl = "/api/rotate/motorA/LOW_A";
-        const motorLowBUrl = "/api/rotate/motorA/LOW_B";
-        const stopMotorUrl = "/api/rotate/motorA/STOP";
-        const stopDUrl = "/api/rotate/motorA/STOP_D";
-        const pumpUrl = "/api/rotate/pump";
-        const stopPumpUrl = "/api/rotate/stop_pump";
-        const ultimateStopUrl = "/api/rotate/ult-stop";
 
-        // Define a function to send an HTTP GET request to the given URL
-        async function sendGetRequest(url) {
-            const response = await fetch(url, {
-                method: "GET"
-            });
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-        }
-
-        // Define functions to call each API endpoint
-        async function moveForward() {
-            await sendGetRequest(moveForwardUrl);
-            console.log("Moved forward");
-        }
-
-        async function moveBackward() {
-            await sendGetRequest(moveBackwardUrl);
-            console.log("Moved backward");
-        }
-
-        async function rotateRight() {
-            await sendGetRequest(rotateRightUrl);
-            console.log("Rotated right");
-        }
-
-        async function rotateLeft() {
-            await sendGetRequest(rotateLeftUrl);
-            console.log("Rotated left");
-        }
-
-        async function motorHighA() {
-            await sendGetRequest(motorHighAUrl);
-            console.log("Set motor A to high");
-        }
-
-        async function motorHighB() {
-            await sendGetRequest(motorHighBUrl);
-            console.log("Set motor B to high");
-        }
-
-        async function motorMediumA() {
-            await sendGetRequest(motorMediumAUrl);
-            console.log("Set motor A to medium");
-        }
-
-        async function motorMediumB() {
-            await sendGetRequest(motorMediumBUrl);
-            console.log("Set motor B to medium");
-        }
-
-        async function motorLowA() {
-            await sendGetRequest(motorLowAUrl);
-            console.log("Set motor A to low");
-        }
-
-        async function motorLowB() {
-            await sendGetRequest(motorLowBUrl);
-            console.log("Set motor B to low");
-        }
-
-        async function stopMotor() {
-            await sendGetRequest(stopMotorUrl);
-            console.log("Stopped motor");
-        }
-
-        async function stopD() {
-            await sendGetRequest(stopDUrl);
-            console.log("Stopped D");
-        }
-
-        async function pump() {
-            await sendGetRequest(pumpUrl);
-            console.log("Started pump");
-        }
-
-        async function stopPump() {
-            await sendGetRequest(stopPumpUrl);
-            console.log("Stopped pump");
-        }
-
-        async function ultimateStop() {
-            await sendGetRequest(ultimateStopUrl);
-            console.log("Ultimate stop");
-        }
-
-        // Call the functions as needed to control the robot
-        moveForward();
-        moveBackward();
-        rotateRight();
-        rotateLeft();
-        motorHighA();
-        motorHighB();
-        motorMediumA();
-        motorMediumB();
-        motorLowA();
-        motorLowB();
-        stopMotor();
-        stopD();
-        pump();
-        stopPump();
-        ultimateStop();
-    </script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Control Panel">
     <meta property="og:type" content="website">
@@ -208,23 +88,24 @@
             </nav>
         </div>
     </header>
-    <h1>Robot Control Panel</h1>
-    <button onclick="moveForward()">Move Forward</button>
-    <button onclick="moveBackward()">Move Backward</button>
-    <button onclick="rotateRight()">Rotate Right</button>
-    <button onclick="rotateLeft()">Rotate Left</button>
-    <button onclick="motorHighA()">Set Motor A to High</button>
-    <button onclick="motorHighB()">Set Motor B to High</button>
-    <button onclick="motorMediumA()">Set Motor A to Medium</button>
-    <button onclick="motorMediumB()">Set Motor B to Medium</button>
-    <button onclick="motorLowA()">Set Motor A to Low</button>
-    <button onclick="motorLowB()">Set Motor B to Low</button>
-    <button onclick="stopMotor()">Stop Motor</button>
-    <button onclick="stopD()">Stop D</button>
-    <button onclick="pump()">Start Pump</button>
-    <button onclick="stopPump()">Stop Pump</button>
-    <button onclick="ultimateStop()">Ultimate Stop</button>
-
+    <div id="Control-Panel-heading" style="display:none">
+        <h1>Robot Control Panel</h1>
+        <button onclick="moveForward()">Move Forward</button>
+        <button onclick="moveBackward()">Move Backward</button>
+        <button onclick="rotateRight()">Rotate Right</button>
+        <button onclick="rotateLeft()">Rotate Left</button>
+        <button onclick="motorHighA()">Set Motor A to High</button>
+        <button onclick="motorHighB()">Set Motor B to High</button>
+        <button onclick="motorMediumA()">Set Motor A to Medium</button>
+        <button onclick="motorMediumB()">Set Motor B to Medium</button>
+        <button onclick="motorLowA()">Set Motor A to Low</button>
+        <button onclick="motorLowB()">Set Motor B to Low</button>
+        <button onclick="stopMotor()">Stop Motor</button>
+        <button onclick="stopD()">Stop D</button>
+        <button onclick="pump()">Start Pump</button>
+        <button onclick="stopPump()">Stop Pump</button>
+        <button onclick="ultimateStop()">Ultimate Stop</button>
+    </div>
     <!-- <section class="u-clearfix u-section-1" id="sec-b6e2">
         <div class="u-clearfix u-sheet u-sheet-1"></div>
     </section> -->
@@ -235,6 +116,25 @@
             <blockquote class="u-align-center-xs u-text u-text-black u-text-1" spellcheck="false">All rights reserved to the Agricultural Power and Machinery Team, Department of Agricultural Engineering, Kafr El-Sheikh University for the year 2023</blockquote>
         </div>
     </footer>
+
+    <script>
+        // Get the values of the username, password, and IP address fields from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        const password = urlParams.get('password');
+        const ipAddress = urlParams.get('ip_address');
+
+        // Check if the user is an admin
+        if (username === 'Admin77' && password === '1985127') {
+            // Show the content of the admin page
+            const adminPageContainer = document.querySelector('#Control-Panel-heading');
+            adminPageContainer.style.display = 'block';
+        } else {
+            // Redirect the user to the login page
+            alert('You do not have permissions to access this page');
+            window.location.href = 'index.html';
+        }
+    </script>
 
 
 </body>
